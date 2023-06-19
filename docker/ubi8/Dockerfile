@@ -28,6 +28,17 @@ RUN chown -Rf apache:root /var/run/httpd && chmod -Rf 775 /var/run/httpd
 RUN chmod g+w /etc/passwd
 RUN chown apache /opt/deck/html/settings-local.js
 
+
+RUN mkdir -p /opt/deck/plugins
+
+#custom plugin zip files adding
+#ARG CUSTOMPLUGIN_RELEASEVERSION
+#ENV CUSTOMPLUGIN_RELEASEVERSION=$CUSTOMPLUGIN_RELEASEVERSION
+RUN wget -O Armory.ObservabilityPlugin-armory-observability-plugin-v1.4.2-SNAPSHOT.zip -c https://github.com/OpsMx/armory-observability-plugin/releases/download/v1.0.0/armory-observability-plugin-v1.4.2-SNAPSHOT.zip -P /opt/deck/plugins 
+RUN mv Armory.ObservabilityPlugin-armory-observability-plugin-v1.4.2-SNAPSHOT.zip /opt/deck/plugins/
+RUN chmod -R 777 /opt/deck/plugins/
+RUN chown -R apache:apache /opt/
+
 USER apache
 
 CMD docker/run-apache2.sh
