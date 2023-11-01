@@ -12,6 +12,7 @@ import {
   SERVER_GROUP_WRITER,
   ServerGroupReader,
   ServerGroupWarningMessageService,
+  SETTINGS,
   SubnetReader,
 } from '@spinnaker/core';
 
@@ -361,6 +362,10 @@ angular
         return AccountService.getAccountDetails(serverGroup.account).then((details) => {
           serverGroup.accountDetails = details;
         });
+      };
+
+      this.isEditEnabled = () => {
+        return SETTINGS.adHocInfraEditEnabled;
       };
     },
   ]);
