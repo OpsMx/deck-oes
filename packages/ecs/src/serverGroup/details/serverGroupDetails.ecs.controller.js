@@ -6,7 +6,6 @@ import { chain, filter, find, has, isEmpty } from 'lodash';
 
 import {
   AccountService,
-  AuthenticationService,
   ConfirmationModalService,
   FirewallLabels,
   OVERRIDE_REGISTRY,
