@@ -5,7 +5,6 @@ import type { IModalService } from 'angular-ui-bootstrap';
 
 import type { Application, IManifest, IOwnerOption, IServerGroup } from '@spinnaker/core';
 import {
-  AuthenticationService,
   ClusterTargetBuilder,
   ConfirmationModalService,
   ManifestReader,
@@ -63,22 +62,6 @@ class KubernetesServerGroupDetailsController implements IController {
     } else {
       return [] as any[];
     }
-  }
-
-  public isEditEnabled(): boolean {
-    const authenticatedUser = AuthenticationService.getAuthenticatedUser();
-    const applicationAttr = this.app.attributes;
-    const isExist = (arr1: string[], arr2: string[]) => {
-      return arr1?.some((v) => arr2?.includes(v));
-    };
-    const isWriteEnabled = () => {
-      if (authenticatedUser.name !== applicationAttr.user && applicationAttr.permissions) {
-        return isExist(applicationAttr.permissions?.WRITE, authenticatedUser.roles);
-      } else {
-        return true;
-      }
-    };
-    return SETTINGS.kubernetesAdHocInfraEditEnabled ? isWriteEnabled() : true;
   }
 
   private ownerIsController(ownerReference: any): boolean {
