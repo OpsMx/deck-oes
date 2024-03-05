@@ -27,7 +27,7 @@ RUN chgrp -Rf root /run/lock && chmod -Rf g+w /run/lock
 RUN chown -Rf apache:root /var/run/httpd && chmod -Rf 775 /var/run/httpd
 RUN chmod g+w /etc/passwd
 RUN chown apache /opt/deck/html/settings-local.js
-
+RUN yum -y remove tar vim vi 
 USER apache
 
 CMD docker/run-apache2.sh
