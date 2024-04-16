@@ -1,4 +1,4 @@
-import { isEmpty, template } from 'lodash';
+import { template } from 'lodash';
 import React from 'react';
 import { from as observableFrom, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -62,7 +62,7 @@ export class JobStageExecutionLogs extends React.Component<IJobStageExecutionLog
     }
 
     // prefer links to external logging platforms
-    if (!isEmpty(manifest) && externalLink) {
+    if (externalLink) {
       return (
         <a target="_blank" href={this.renderExternalLink(externalLink, manifest)}>
           Console Output (External)
