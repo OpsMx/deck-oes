@@ -90,7 +90,7 @@ export class DeployStatus extends React.Component<IExecutionDetailsSectionProps,
       <div className="deploy-status">
         <ExecutionDetailsSection name={sectionName} current={currentSection}>
           {SETTINGS.feature.multiBlockFailureMessages ? (
-            stage.failureMessages.map((failureMessage) => (
+            stage.failureMessages.map((failureMessage: any) => (
               <CollapsibleElement key={failureMessage} maxHeight={150}>
                 <StageFailureMessage stage={stage} message={failureMessage} />
               </CollapsibleElement>

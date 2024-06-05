@@ -3,7 +3,7 @@ name: Publish packages to NPM
 on:
   push:
     branches:
-      - 'master'
+      - 'OES-1.33.x'
     paths:
       - 'packages/*/package.json'
 
