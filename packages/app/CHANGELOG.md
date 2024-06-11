@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/spinnaker/deck/compare/deck-app@2.6.0...deck-app@2.7.0) (2023-12-07)
+
+
+### Features
+
+* Add feature flag for multi block failure messages. ([#10061](https://github.com/spinnaker/deck/issues/10061)) ([374f724](https://github.com/spinnaker/deck/commit/374f724de221d68030a86e1f6452e3303390339a))
+
+
+
+
+
+# [2.6.0](https://github.com/spinnaker/deck/compare/deck-app@2.5.7...deck-app@2.6.0) (2023-10-16)
+
+
+### Features
+
+* **helm/bake:** Add additional input fields where we can fill in details of the APIs versions ([#10036](https://github.com/spinnaker/deck/issues/10036)) ([d968183](https://github.com/spinnaker/deck/commit/d9681830244ecd1c70cc02459f148d0822b7187e))
+
+
+
+
+
+## [2.5.7](https://github.com/spinnaker/deck/compare/deck-app@2.5.6...deck-app@2.5.7) (2023-09-06)
+
+**Note:** Version bump only for package deck-app
+
+
+
+
+
+## [2.5.6](https://github.com/spinnaker/deck/compare/deck-app@2.5.5...deck-app@2.5.6) (2023-07-20)
+
+**Note:** Version bump only for package deck-app
+
+
+
+
+
 ## [2.5.5](https://github.com/spinnaker/deck/compare/deck-app@2.5.4...deck-app@2.5.5) (2023-06-02)
 
 **Note:** Version bump only for package deck-app

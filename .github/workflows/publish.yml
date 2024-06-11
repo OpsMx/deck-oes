@@ -3,12 +3,12 @@ name: Publish packages to NPM
 on:
   push:
     branches:
-      - 'master'
+      - 'OES-1.33.x'
     paths:
       - 'packages/*/package.json'
 
 env:
-  NODE_VERSION: 12.16.0
+  NODE_VERSION: 14.21.3
 
 permissions:
   contents: read
@@ -20,12 +20,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: '${{ secrets.SPINNAKERBOT_PERSONAL_ACCESS_TOKEN }}'
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION  }}
 
